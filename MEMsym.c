@@ -182,7 +182,7 @@ void TratarFallo(T_CACHE_LINE *tbl, char *MRAM, int ETQ, int linea, int bloque){
     tbl[linea].ETQ = ETQ;
 
     for(int i = 0; i < TAM_LINEA; i++)
-        tbl[linea].Data[i] = MRAM[bloque + i];
+        tbl[linea].Data[i] = MRAM[(bloque * TAM_LINEA) + i];
 
 }
 
